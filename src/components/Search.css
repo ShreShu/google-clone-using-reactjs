@@ -1,0 +1,49 @@
+.search_container {
+  width: 75vw;
+  height: 30px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  border-radius: 999px;
+  border: 1px solid rgb(199, 198, 198);
+  max-width: 560px;
+  padding: 10px 20px;
+}
+
+.search_container > .MuiSvgIcon-root {
+  margin-top: 5px;
+  color: gray;
+}
+
+.search_container > input {
+  flex: 1;
+  border: none;
+  padding: 10px 20px;
+  font-size: medium;
+}
+
+.search_container > input:focus {
+  border: none;
+  outline-width: 0;
+}
+
+.buttonContained {
+  justify-content: center;
+  display: flex;
+  margin-top: 30px;
+}
+
+.buttonContained > .MuiButton-root {
+  background-color: rgb(245, 246, 247);
+  color: black;
+  border: none;
+  margin: 5px;
+  text-transform: inherit;
+}
+
+.buttonContained > .MuiButton-root:hover {
+  background-color: rgb(238, 238, 238);
+  color: black;
+  border: none;
+}
