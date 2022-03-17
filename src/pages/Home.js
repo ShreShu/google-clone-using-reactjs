@@ -28,7 +28,7 @@ export const Home = () => {
         />
         <div className="searchContainer">
           {/* searchbar */}
-          <Search />
+          <Search hidebutton />
         </div>
       </div>
     </div>

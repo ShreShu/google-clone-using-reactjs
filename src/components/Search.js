@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import { Outlet, useNavigate } from "react-router-dom";
 import "./Search.css";
 import SearchIcon from "@mui/icons-material/Search";
 import MicIcon from "@mui/icons-material/Mic";
 import { Button } from "@mui/material";
 
-export const Search = () => {
+export const Search = ({ hidebutton = false }) => {
   const [searchInput, setSearchInput] = useState("");
+  const history = useNavigate();
 
   function inputVal(event) {
     setSearchInput(event.target.value);
@@ -15,10 +17,11 @@ export const Search = () => {
   const search = (e) => {
     e.preventDefault();
     console.log("search me");
+    history("/search");
   };
 
   return (
-    <>
+    <form>
       <div className="search_container">
         <SearchIcon />
         <input
@@ -30,14 +33,32 @@ export const Search = () => {
         />
         <MicIcon />
       </div>
-      <div className="buttonContained">
-        <Button variant="outlined" size="medium" onClick={search}>
-          Google Search
-        </Button>
-        <Button variant="outlined" size="medium">
-          I'm Feeling Lucky
-        </Button>
-      </div>
-    </>
+      {hidebutton ? (
+        <div className="buttonContained">
+          <Button
+            type="submit"
+            variant="outlined"
+            size="medium"
+            onClick={search}
+          >
+            Google Search
+          </Button>
+          <Button variant="outlined" size="medium">
+            I'm Feeling Lucky
+          </Button>
+        </div>
+      ) : (
+        <div className="buttonContained_hidden">
+          <Button
+            type="submit"
+            variant="outlined"
+            size="medium"
+            onClick={search}
+          >
+            Google Search
+          </Button>
+        </div>
+      )}
+    </form>
   );
 };
