@@ -1,0 +1,42 @@
+.searchPage_options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: gray;
+}
+
+.searchpageOption_left,
+.searchpageOption_right {
+  display: flex;
+}
+
+.searchPage_option > a {
+  text-decoration: none;
+  color: gray;
+}
+
+.searchpageOption_right {
+  margin-left: 80px;
+}
+
+.searchpageOption_left {
+  margin-left: 20%;
+}
+
+.searchPage_option {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.searchPage_results {
+  margin-left: 20%;
+}
+
+.searchPage {
+  display: flex;
+  flex-direction: column;
+}

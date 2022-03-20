@@ -4,10 +4,11 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { StateProvider } from "./contextApi/StateProvider";
+import reducer, { initialState } from "./contextApi/reducer";
 
 ReactDOM.render(
   <React.StrictMode>
-    <StateProvider>
+    <StateProvider initialState={initialState} reducer={reducer}>
       <BrowserRouter>
         <App />
       </BrowserRouter>

@@ -1,0 +1,15 @@
+.results {
+  margin-top: 20px;
+}
+
+.results > a {
+  text-decoration: none;
+}
+
+.displayLink {
+  color: black;
+}
+
+.diplayTitle {
+  font-weight: bold;
+}

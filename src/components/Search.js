@@ -4,8 +4,15 @@ import "./Search.css";
 import SearchIcon from "@mui/icons-material/Search";
 import MicIcon from "@mui/icons-material/Mic";
 import { Button } from "@mui/material";
+import { useDataLayerValue } from "../contextApi/StateProvider";
+import { actionTypes } from "../contextApi/reducer";
+import { useGoogleSearch } from "../axios/useGoogleSearch";
 
 export const Search = ({ hidebutton = false }) => {
+  const [{}, dispatch] = useDataLayerValue();
+
+  //console.log(useStateValue());
+
   const [searchInput, setSearchInput] = useState("");
   const history = useNavigate();
 
@@ -16,7 +23,11 @@ export const Search = ({ hidebutton = false }) => {
 
   const search = (e) => {
     e.preventDefault();
-    console.log("search me");
+    dispatch({
+      type: actionTypes.SET_SEARCH_TERM,
+      term: searchInput,
+    });
+    console.log("search me", searchInput);
     history("/search");
   };
 
