@@ -9,7 +9,7 @@ import { actionTypes } from "../contextApi/reducer";
 import { useGoogleSearch } from "../axios/useGoogleSearch";
 
 export const Search = ({ hidebutton = false }) => {
-  const [{}, dispatch] = useDataLayerValue();
+  const [{ term }, dispatch] = useDataLayerValue();
 
   //console.log(useStateValue());
 

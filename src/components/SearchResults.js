@@ -69,7 +69,7 @@ export const SearchResults = () => {
             {data?.searchInformation.formattedSearchTime} for {term}
             {data?.items.map((item) => (
               //   <a href={item.link}>{item.displayLink}</a>
-              <Results key={item.cacheId} item={item} />
+              <Results key={Math.random()} item={item} />
             ))}
           </div>
         )}

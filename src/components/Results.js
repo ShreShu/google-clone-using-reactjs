@@ -3,7 +3,6 @@ import { Search } from "./Search";
 import "./Results.css";
 
 export const Results = (props) => {
-  console.log("I am item", props.item.link);
   return (
     <div className="results">
       <a className="displayLink" href={props.item.link}>
